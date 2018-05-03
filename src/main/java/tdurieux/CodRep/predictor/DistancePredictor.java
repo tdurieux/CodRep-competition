@@ -4,6 +4,7 @@ import info.debatty.java.stringsimilarity.*;
 import info.debatty.java.stringsimilarity.interfaces.NormalizedStringSimilarity;
 import tdurieux.CodRep.filter.DefaultLineFilter;
 import tdurieux.CodRep.filter.LineFilter;
+import tdurieux.CodRep.util.SpoonUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +16,7 @@ public class DistancePredictor implements LinePredictor {
     private final String line;
     private final String fileContent;
     private final int sizeSequence;
+    private final String[] lines;
     protected LineFilter lineFilter;
 
     public DistancePredictor(String fileContent, String line) {
@@ -26,12 +28,13 @@ public class DistancePredictor implements LinePredictor {
         this.fileContent = fileContent;
         this.sizeSequence = Math.min(line.length(), sizeSequence);
         this.lineFilter = new DefaultLineFilter();
+        lines = SpoonUtil.splitLine(fileContent);
     }
 
 
     private Map<Integer, Double> similarity(NormalizedStringSimilarity similarityImpl) {
         Map<Integer, Double> result = new HashMap<>();
-        String[] lines = fileContent.split("\\r?\\n");
+        
         for (int i = 0; i < lines.length; i++) {
             String s = lines[i].trim();
             if (s.equals(line.trim())) {
@@ -46,6 +49,7 @@ public class DistancePredictor implements LinePredictor {
         }
         return result;
     }
+
     public Map<Integer, Double> sorensen() {
         return similarity(new SorensenDice());
     }
@@ -65,9 +69,9 @@ public class DistancePredictor implements LinePredictor {
     public Map<Integer, Double> getSimilarity() {
         //return normalizedLevenshtein();
         //return jaroWinkler();
-        return sorensen();
         //return jaccard();
         //return cousin();
+        return sorensen();
     }
 
 

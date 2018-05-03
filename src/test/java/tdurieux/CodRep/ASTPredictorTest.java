@@ -1,8 +1,10 @@
 package tdurieux.CodRep;
 
 import org.junit.Test;
+import tdurieux.CodRep.predictor.ASTValidatorPredictor;
 import tdurieux.CodRep.predictor.LinePredictor;
 import tdurieux.CodRep.predictor.SyntaxPredictor;
+import tdurieux.CodRep.util.SpoonUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +33,8 @@ public class ASTPredictorTest {
     @Test
     public void dataset1() throws IOException {
         //runOnDataset(DistancePredictor.class, "./Datasets/Dataset1");
-        runOnDataset(SyntaxPredictor.class, "./Datasets/Dataset1");
+        //runOnDataset(SyntaxPredictor.class, "./Datasets/Dataset1");
+        runOnDataset(ASTValidatorPredictor.class, "./Datasets/Dataset1");
     }
 
     /**
@@ -92,7 +95,7 @@ public class ASTPredictorTest {
                     valid++;
                 } else {
                     System.out.println("Old Line  " + predictor.getLine().trim());
-                    String[] fileByLine = predictor.getFileContent().split("\n");
+                    String[] fileByLine = SpoonUtil.splitLine(predictor.getFileContent());
                     System.out.println("Expected  " + fileByLine[solution].trim() + (predictions.contains(solution)? " in top 10 ":""));
                     System.out.println("Predicted " + fileByLine[prediction].trim() + "\n\n");
                     predictor.predict();

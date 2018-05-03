@@ -11,6 +11,7 @@ import spoon.reflect.visitor.filter.LineFilter;
 import spoon.reflect.visitor.filter.TypeFilter;
 import spoon.support.compiler.VirtualFile;
 import tdurieux.CodRep.util.ReachableVariableVisitor;
+import tdurieux.CodRep.util.SpoonUtil;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -26,8 +27,8 @@ public class ASTPredictor implements LinePredictor {
         this.line = line;
         this.fileContent = fileContent;
         try {
-            ctModel = getModelFromString(fileContent);
-            ctStatement = getAstFromLine(line);
+            ctModel = SpoonUtil.getModelFromString(fileContent);
+            ctStatement = SpoonUtil.getAstFromLine(line);
         } catch (Exception e) {
             System.err.println(e.getMessage());
             System.err.println(line);
@@ -42,95 +43,6 @@ public class ASTPredictor implements LinePredictor {
     @Override
     public String getFileContent() {
         return fileContent;
-    }
-
-    private static CtModel getModelFromString(String contents) {
-        Launcher launcher = new Launcher();
-        launcher.addInputResource(new VirtualFile(contents));
-        launcher.getEnvironment().setNoClasspath(true);
-        launcher.getEnvironment().setAutoImports(true);
-        launcher.getEnvironment().setCommentEnabled(true);
-        return launcher.buildModel();
-    }
-
-    private static CtElement getAstFromLine(String line) {
-        Launcher launcher = new Launcher();
-        Factory f = launcher.getFactory();
-        CtClass<?> w = f.Class().create("Wrapper");
-        Set<ModifierKind> modifiers = EnumSet.of(ModifierKind.STATIC);
-        Set<CtTypeReference<? extends Throwable>> thrownTypes = new HashSet<>();
-        CtClass<Throwable> exception = f.Class().get(Throwable.class);
-        thrownTypes.add(exception.getReference());
-        CtTypeReference<?> returnType = f.Type().VOID_PRIMITIVE;
-
-        line = line.trim();
-        if (line.contains("{") && !line.contains("}")) {
-            line += "}";
-        }
-        if (line.contains(")") && !line.contains("(")) {
-            return null;
-        }
-        if (line.contains("(") && !line.contains(")")) {
-            return null;
-        }
-        if (line.startsWith("return")) {
-            returnType = f.Type().OBJECT;
-        }
-        if (line.startsWith("} else ")) {
-            line = line.substring(6);
-        }
-        if (line.startsWith("+")) {
-            // HAAAA
-            return null;
-        }
-        if (line.startsWith("import")) {
-            return null;
-        }
-        if (line.startsWith("@")) {
-            return null;
-        }
-        if (line.startsWith("#")) {
-            return null;
-        }
-
-        if (line.contains("super(") || line.contains("this(")) {
-            String wrapInClass = "abstract class Wrapper { Wrapper() {" + line + "}}";
-            try {
-                CtModel modelFromString = getModelFromString(wrapInClass);
-                return modelFromString.getRootPackage().getFactory().Class().get("Wrapper").getConstructor().getBody().getStatement(0);
-            } catch (Exception ignore) {
-            }
-        }
-
-        if (line.contains("public")
-                || line.contains("void")
-                || line.contains("static")
-                || line.contains("abstract")
-                || line.contains("final")
-                || line.contains("private")) {
-            String wrapInClass = "abstract class Wrapper {" + line + "}";
-            try {
-                CtModel modelFromString = getModelFromString(wrapInClass);
-                List<CtTypeMember> elements = modelFromString.getRootPackage().getFactory().Class().get("Wrapper").getTypeMembers().stream().filter(t -> !(t instanceof CtConstructor)).collect(Collectors.toList());
-                if (!elements.isEmpty()) {
-                    return elements.get(0);
-                }
-            } catch (Exception ignore) {
-            }
-        }
-
-        CtBlock body = f.createCtBlock(f.createCodeSnippetStatement(line));
-
-
-        f.createMethod(w, modifiers, returnType, "wrap", new ArrayList<CtParameter<?>>(), thrownTypes, body);
-
-        String contents = w.toString();
-        w.getPackage().removeType(w);
-        launcher.addInputResource(new VirtualFile(contents));
-        launcher.getEnvironment().setNoClasspath(true);
-        launcher.getEnvironment().setAutoImports(true);
-        launcher.buildModel();
-        return launcher.getFactory().Class().get("Wrapper").getMethod("wrap").getBody().getStatement(0);
     }
 
     public List<Integer> predict() {
