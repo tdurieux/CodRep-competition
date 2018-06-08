@@ -1,5 +1,6 @@
 package tdurieux.CodRep.util;
 
+import org.eclipse.jdt.core.compiler.CategorizedProblem;
 import spoon.Launcher;
 import spoon.reflect.CtModel;
 import spoon.reflect.code.CtBlock;
@@ -12,6 +13,7 @@ import spoon.reflect.declaration.ModifierKind;
 import spoon.reflect.factory.Factory;
 import spoon.reflect.reference.CtTypeReference;
 import spoon.support.compiler.VirtualFile;
+import spoon.support.compiler.jdt.JDTBasedSpoonCompiler;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
@@ -26,13 +28,25 @@ public class SpoonUtil {
         return fileContent.split("\\r?\\n");
     }
 
-    public static CtModel getModelFromString(String contents) {
+    public static Launcher getModelFromString(String contents) {
         Launcher launcher = new Launcher();
         launcher.addInputResource(new VirtualFile(contents));
         launcher.getEnvironment().setNoClasspath(true);
         launcher.getEnvironment().setAutoImports(true);
         launcher.getEnvironment().setCommentEnabled(true);
-        return launcher.buildModel();
+        launcher.buildModel();
+        return launcher;
+    }
+
+    public static List<CategorizedProblem> filterProblem(List<CategorizedProblem> input, int line) {
+        List<CategorizedProblem> problems = new ArrayList<>();
+        for (int i = 0; i < input.size(); i++) {
+            CategorizedProblem problem = input.get(i);
+            if (problem.getSourceLineNumber() - 1 == line) {
+                problems.add(problem);
+            }
+        }
+        return problems;
     }
 
     public static CtElement getAstFromLine(String line) {
@@ -78,7 +92,7 @@ public class SpoonUtil {
         if (line.contains("super(") || line.contains("this(")) {
             String wrapInClass = "abstract class Wrapper { Wrapper() {" + line + "}}";
             try {
-                CtModel modelFromString = getModelFromString(wrapInClass);
+                CtModel modelFromString = getModelFromString(wrapInClass).getModel();
                 return modelFromString.getRootPackage().getFactory().Class().get("Wrapper").getConstructor().getBody().getStatement(0);
             } catch (Exception ignore) {
             }
@@ -92,7 +106,7 @@ public class SpoonUtil {
                 || line.contains("private")) {
             String wrapInClass = "abstract class Wrapper {" + line + "}";
             try {
-                CtModel modelFromString = getModelFromString(wrapInClass);
+                CtModel modelFromString = getModelFromString(wrapInClass).getModel();
                 List<CtTypeMember> elements = modelFromString.getRootPackage().getFactory().Class().get("Wrapper").getTypeMembers().stream().filter(t -> !(t instanceof CtConstructor)).collect(Collectors.toList());
                 if (!elements.isEmpty()) {
                     return elements.get(0);

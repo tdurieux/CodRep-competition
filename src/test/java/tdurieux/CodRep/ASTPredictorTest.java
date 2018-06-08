@@ -25,8 +25,8 @@ public class ASTPredictorTest {
      * DistancePredictor jaroW       3388/4394 77% , in Top 10 4069 92% , loss 0.22485497589609324
      * DistancePredictor Levenshtein 3557/4394 80% , in Top 10 4221 96% , loss 0.18782169269848853
      * SyntaxPredictor Cousin:       3834/4394 87% , in Top 10 4332 98% , loss 0.12629793562473987
-     * SyntaxPredictor sorensen:     3887/4394 88% , in Top 10 4331 98% , loss 0.1143165305556653
-     * SyntaxPredictor jaccard:      3887/4394 88% , in Top 10 4331 98% , loss 0.1143165305556653
+     * SyntaxPredictor sorensen:     3907/4394 88% , in Top 10 4327 98% , loss 0.10981198440495205
+     * SyntaxPredictor jaccard:      3908/4394 88% , in Top 10 4325 98% , loss 0.10958444752743954
      * SyntaxPredictor jaroWinkler   3468/4394 78% , in Top 10 4167 94% , loss 0.20649968333865018
      * SyntaxPredictor Levenshtein   3611/4394 82% , in Top 10 4257 96% , loss 0.1757567738051666
      */
@@ -42,12 +42,22 @@ public class ASTPredictorTest {
      * DistancePredictor cosin       9980/11069 90% , in Top 10 10798 97% , loss 0.09612452079485122
      * DistancePredictor sorensen    9935/11069 89% , in Top 10 10816 97% , loss 0.10024445092498996
      * SyntaxPredictor cosin         9962/11069 89% , in Top 10 10809 97% , loss 0.09809164895063167
-     * SyntaxPredictor sorensen     10104/11069 91% , in Top 10 10833 97% , loss 0.08536293667171425
+     * SyntaxPredictor sorensen     10104/11069 91% , in Top 10 10831 97% , loss 0.0853413900365686
      */
     @Test
     public void dataset2() throws IOException {
         //runOnDataset(DistancePredictor.class,"./Datasets/Dataset2");
         runOnDataset(SyntaxPredictor.class,"./Datasets/Dataset2");
+    }
+
+    /**
+     * SyntaxPredictor 17466/18633 93% , in Top 10 18444 98% , loss 0.06108865517130069
+     */
+    @Test
+    public void dataset3() throws IOException {
+        //runOnDataset(DistancePredictor.class, "./Datasets/Dataset3");
+        runOnDataset(SyntaxPredictor.class, "./Datasets/Dataset3");
+        //runOnDataset(ASTValidatorPredictor.class, "./Datasets/Dataset3");
     }
 
     public static <T extends LinePredictor> T linePredictorFactory(Class<T> predictorClass, File filename) throws IOException {
@@ -98,7 +108,7 @@ public class ASTPredictorTest {
                     String[] fileByLine = SpoonUtil.splitLine(predictor.getFileContent());
                     System.out.println("Expected  " + fileByLine[solution].trim() + (predictions.contains(solution)? " in top 10 ":""));
                     System.out.println("Predicted " + fileByLine[prediction].trim() + "\n\n");
-                    predictor.predict();
+                    //predictor.predict();
                 }
                 if (predictions.contains(solution)) {
                     presentInThePrediction++;

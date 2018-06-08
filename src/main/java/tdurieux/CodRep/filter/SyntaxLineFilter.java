@@ -26,6 +26,9 @@ public class SyntaxLineFilter extends DefaultLineFilter {
         if (newLine.trim().startsWith("+") && !lineContent.trim().startsWith("+")) {
             return false;
         }
+        if (!newLine.trim().startsWith("+") && lineContent.trim().startsWith("+")) {
+            return false;
+        }
         if (removeComment(newLine).trim().endsWith("+") && !removeComment(newLine).trim().endsWith("+")) {
             return false;
         }
@@ -36,6 +39,18 @@ public class SyntaxLineFilter extends DefaultLineFilter {
             return false;
         }
         if ((newLineWithoutComment.startsWith("interface ") || newLineWithoutComment.contains(" interface ")) && !lineWithoutComment.contains("interface ")) {
+            return false;
+        }
+        if (newLineWithoutComment.startsWith("import ") && !lineWithoutComment.contains("import ")) {
+            return false;
+        }
+        if (newLineWithoutComment.startsWith("package ") && !lineWithoutComment.contains("package ")) {
+            return false;
+        }
+        if (!newLineWithoutComment.contains("import ") && lineWithoutComment.contains("import ")) {
+            return false;
+        }
+        if (!newLineWithoutComment.contains("package ") && lineWithoutComment.contains("package ")) {
             return false;
         }
         int nbBraceNewLine = StringUtils.countMatches(newLineWithoutComment, "(") - StringUtils.countMatches(newLineWithoutComment, ")");

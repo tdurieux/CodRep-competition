@@ -34,16 +34,20 @@ public class DistancePredictor implements LinePredictor {
 
     private Map<Integer, Double> similarity(NormalizedStringSimilarity similarityImpl) {
         Map<Integer, Double> result = new HashMap<>();
-        
+
+        String trimmedLine = line.trim();
+        String lowerLine = trimmedLine;
         for (int i = 0; i < lines.length; i++) {
             String s = lines[i].trim();
-            if (s.equals(line.trim())) {
+            if (s.isEmpty()) {
                 continue;
             }
-            String line = this.line.trim().toLowerCase();
-            s = s.toLowerCase();
-            double similarity = similarityImpl.similarity(line, s);
-            if (lineFilter.filter(i, s, line, similarity)) {
+            if (s.equals(trimmedLine)) {
+                continue;
+            }
+            //s = s.toLowerCase();
+            double similarity = similarityImpl.similarity(lowerLine, s);
+            if (lineFilter.filter(i, s, lowerLine, similarity)) {
                 result.put(i, similarity);
             }
         }

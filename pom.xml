@@ -101,7 +101,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                fr.inria.spirals.main.Launcher
+                                tdurieux.CodRep.Launcher
                             </mainClass>
                         </manifest>
                     </archive>

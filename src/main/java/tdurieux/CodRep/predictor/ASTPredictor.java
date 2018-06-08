@@ -27,7 +27,7 @@ public class ASTPredictor implements LinePredictor {
         this.line = line;
         this.fileContent = fileContent;
         try {
-            ctModel = SpoonUtil.getModelFromString(fileContent);
+            ctModel = SpoonUtil.getModelFromString(fileContent).getModel();
             ctStatement = SpoonUtil.getAstFromLine(line);
         } catch (Exception e) {
             System.err.println(e.getMessage());
