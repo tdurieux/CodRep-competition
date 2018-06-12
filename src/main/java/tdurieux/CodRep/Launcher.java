@@ -7,12 +7,14 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 public class Launcher {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		if (args.length != 1) {
 			System.err.println("Invalid Usage");
 			System.err.println("java -jar coderep.jar <Files>");
@@ -36,23 +38,36 @@ public class Launcher {
 		}
 	}
 
-	private static <T extends LinePredictor> void runOnDataset(Class<T> predictorClass, String path) throws IOException {
-		List<Path> tasks = Files.list(new File(path).toPath()).collect(Collectors.toList());
-		for (Path p : tasks) {
+	private static <T extends LinePredictor> void runOnDataset(Class<T> predictorClass, String path) throws IOException, InterruptedException {
+		ExecutorService executor = Executors.newFixedThreadPool(2);
+
+		List<Callable<Integer>> tasks = Files.list(new File(path).toPath()).collect(Collectors.toList()).stream().map(p -> (Callable<Integer>) () -> {
 			T predictor;
 			try {
 				predictor = linePredictorFactory(predictorClass, p.toFile());
 			} catch (Throwable e) {
 				e.printStackTrace();
-				continue;
+				return 1;
 			}
 
 			List<Integer> predictions = predictor.predict();
-			int prediction = 1;
+			Integer prediction = 1;
 			if (!predictions.isEmpty()) {
 				prediction = predictions.get(0);
 			}
 			System.out.println(p.toAbsolutePath() + " " + (prediction));
-		}
+			return prediction;
+		}).collect(Collectors.toList());
+
+		executor.invokeAll(tasks).stream()
+			.map(future -> {
+				try {
+					return future.get();
+				}
+				catch (Exception e) {
+					throw new IllegalStateException(e);
+				}
+			});
+		executor.shutdown();
 	}
 }
