@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,8 +34,8 @@ public class ASTPredictorTest {
     @Test
     public void dataset1() throws IOException {
         //runOnDataset(DistancePredictor.class, "./Datasets/Dataset1");
-        //runOnDataset(SyntaxPredictor.class, "./Datasets/Dataset1");
-        runOnDataset(ASTValidatorPredictor.class, "./Datasets/Dataset1");
+        runOnDataset(SyntaxPredictor.class, "./Datasets/Dataset1");
+        //runOnDataset(ASTValidatorPredictor.class, "./Datasets/Dataset1");
     }
 
     /**
@@ -58,6 +59,12 @@ public class ASTPredictorTest {
         //runOnDataset(DistancePredictor.class, "./Datasets/Dataset3");
         runOnDataset(SyntaxPredictor.class, "./Datasets/Dataset3");
         //runOnDataset(ASTValidatorPredictor.class, "./Datasets/Dataset3");
+    }
+
+    @Test
+    public void dataset4() throws IOException {
+        //runOnDataset(DistancePredictor.class,"./Datasets/Dataset4");
+        runOnDataset(SyntaxPredictor.class,"./Datasets/Dataset4");
     }
 
     public static <T extends LinePredictor> T linePredictorFactory(Class<T> predictorClass, File filename) throws IOException {
@@ -92,11 +99,15 @@ public class ASTPredictorTest {
                 String task = p.toFile().getName();
 
                 int solution = Integer.parseInt(new String(Files.readAllBytes(new File(path + "/Solutions/" + task).toPath())));
-                List<Integer> predictions = predictor.predict();
+                List<List<Integer>> predictions = predictor.predict();
+                List<Integer> allLines = new ArrayList<>(10);
+                for (List<Integer> prediction : predictions) {
+                    allLines.addAll(prediction);
+                }
 
                 int prediction = 0;
                 if (!predictions.isEmpty()) {
-                    prediction = predictions.get(0);
+                    prediction = predictions.get(0).get(0);
                 } else {
                     //predictor.predict();
                     //throw new RuntimeException("should not " + predictor.getLine());
@@ -106,11 +117,11 @@ public class ASTPredictorTest {
                 } else {
                     System.out.println("Old Line  " + predictor.getLine().trim());
                     String[] fileByLine = SpoonUtil.splitLine(predictor.getFileContent());
-                    System.out.println("Expected  " + fileByLine[solution].trim() + (predictions.contains(solution)? " in top 10 ":""));
+                    System.out.println("Expected  " + fileByLine[solution].trim() + (allLines.contains(solution)? " in top 10 ":""));
                     System.out.println("Predicted " + fileByLine[prediction].trim() + "\n\n");
                     //predictor.predict();
                 }
-                if (predictions.contains(solution)) {
+                if (allLines.contains(solution)) {
                     presentInThePrediction++;
                 }
                 double loss = Math.tanh(Math.abs(solution-prediction));

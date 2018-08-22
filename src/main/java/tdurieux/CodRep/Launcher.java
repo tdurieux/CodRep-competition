@@ -50,10 +50,10 @@ public class Launcher {
 				return 1;
 			}
 
-			List<Integer> predictions = predictor.predict();
+			List<List<Integer>> predictions = predictor.predict();
 			Integer prediction = 1;
 			if (!predictions.isEmpty()) {
-				prediction = predictions.get(0);
+				prediction = predictions.get(0).get(0);
 			}
 			System.out.println(p.toAbsolutePath() + " " + (prediction));
 			return prediction;

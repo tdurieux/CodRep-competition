@@ -16,7 +16,7 @@ public class DistancePredictor implements LinePredictor {
     private final String line;
     private final String fileContent;
     private final int sizeSequence;
-    private final String[] lines;
+    private final Map<String, List<Integer>> lines;
     protected LineFilter lineFilter;
 
     public DistancePredictor(String fileContent, String line) {
@@ -28,17 +28,16 @@ public class DistancePredictor implements LinePredictor {
         this.fileContent = fileContent;
         this.sizeSequence = Math.min(line.length(), sizeSequence);
         this.lineFilter = new DefaultLineFilter();
-        lines = SpoonUtil.splitLine(fileContent);
+        lines = SpoonUtil.splitLineToMap(fileContent);
     }
 
 
-    private Map<Integer, Double> similarity(NormalizedStringSimilarity similarityImpl) {
-        Map<Integer, Double> result = new HashMap<>();
+    private Map<List<Integer>, Double> similarity(NormalizedStringSimilarity similarityImpl) {
+        Map<List<Integer>, Double> result = new HashMap<>();
 
         String trimmedLine = line.trim();
         String lowerLine = trimmedLine;
-        for (int i = 0; i < lines.length; i++) {
-            String s = lines[i].trim();
+        for (String s : lines.keySet()) {
             if (s.isEmpty()) {
                 continue;
             }
@@ -47,30 +46,30 @@ public class DistancePredictor implements LinePredictor {
             }
             //s = s.toLowerCase();
             double similarity = similarityImpl.similarity(lowerLine, s);
-            if (lineFilter.filter(i, s, lowerLine, similarity)) {
-                result.put(i, similarity);
+            if (lineFilter.filter(lines.get(s), s, lowerLine, similarity)) {
+                result.put(lines.get(s), similarity);
             }
         }
         return result;
     }
 
-    public Map<Integer, Double> sorensen() {
+    public Map<List<Integer>, Double> sorensen() {
         return similarity(new SorensenDice());
     }
-    public Map<Integer, Double> jaccard() {
+    public Map<List<Integer>, Double> jaccard() {
         return similarity(new Jaccard());
     }
-    public Map<Integer, Double> jaroWinkler() {
+    public Map<List<Integer>, Double> jaroWinkler() {
         return similarity(new JaroWinkler());
     }
-    public Map<Integer, Double> normalizedLevenshtein() {
+    public Map<List<Integer>, Double> normalizedLevenshtein() {
         return similarity(new NormalizedLevenshtein());
     }
-    public Map<Integer, Double> cousin() {
+    public Map<List<Integer>, Double> cousin() {
         return similarity(new Cosine(sizeSequence));
     }
 
-    public Map<Integer, Double> getSimilarity() {
+    public Map<List<Integer>, Double> getSimilarity() {
         //return normalizedLevenshtein();
         //return jaroWinkler();
         //return jaccard();
@@ -81,9 +80,9 @@ public class DistancePredictor implements LinePredictor {
 
 
     @Override
-    public List<Integer> predict() {
-        Map<Integer, Double> result = getSimilarity();
-        List<Integer> output = new ArrayList<>(result.keySet());
+    public List<List<Integer>> predict() {
+        Map<List<Integer>, Double> result = getSimilarity();
+        List<List<Integer>> output = new ArrayList<>(result.keySet());
 
         output.sort((s1, s2) -> {
             if (result.get(s1) > result.get(s2)) {

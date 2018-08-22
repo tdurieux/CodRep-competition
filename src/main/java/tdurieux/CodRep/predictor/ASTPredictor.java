@@ -45,7 +45,7 @@ public class ASTPredictor implements LinePredictor {
         return fileContent;
     }
 
-    public List<Integer> predict() {
+    public List<List<Integer>> predict() {
         DistancePredictor distancePredictor = new DistancePredictor(fileContent, line);
 
         if (ctStatement == null) {
@@ -110,15 +110,15 @@ public class ASTPredictor implements LinePredictor {
                 return ((CtTypeMember) ctStatement).getSimpleName().equals(s.getSimpleName());
             }).collect(Collectors.toList());
 
-            List<Integer> output = new ArrayList<>();
+            List<List<Integer>> output = new ArrayList<>();
             if (options.isEmpty()) {
                 return distancePredictor.predict();
             }
             for (int i = 0; i < options.size(); i++) {
                 CtTypeMember option =  options.get(i);
-                output.add(option.getPosition().getLine() - 1);
+                //output.add(option.getPosition().getLine() - 1);
             }
-            Map<Integer, Double> result = distancePredictor.getSimilarity();
+            Map<List<Integer>, Double> result = distancePredictor.getSimilarity();
             output.sort((s1, s2) -> {
                 if (!result.containsKey(s1) && result.containsKey(s2)) {
                     return 1;
@@ -202,8 +202,8 @@ public class ASTPredictor implements LinePredictor {
             }
         }).collect(Collectors.toList());
 
-        Map<Integer, Double> result = distancePredictor.getSimilarity();
-        TreeSet<Integer> output = new TreeSet<>((s1, s2) -> {
+        Map<List<Integer>, Double> result = distancePredictor.getSimilarity();
+        /*TreeSet<List<Integer> output = new TreeSet<>((s1, s2) -> {
             if (!result.containsKey(s1) && result.containsKey(s2)) {
                 return 1;
             }
@@ -232,7 +232,7 @@ public class ASTPredictor implements LinePredictor {
                     output.add(j);
                 }
             }
-        }
-        return new ArrayList<>(output);
+        }*/
+        return null;
     }
 }

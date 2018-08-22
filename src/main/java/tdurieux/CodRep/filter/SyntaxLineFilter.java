@@ -2,10 +2,12 @@ package tdurieux.CodRep.filter;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.List;
+
 public class SyntaxLineFilter extends DefaultLineFilter {
 
     @Override
-    public boolean filter(int line, String lineContent, String newLine, double similarity) {
+    public boolean filter(List<Integer> line, String lineContent, String newLine, double similarity) {
         if (!super.filter(line, lineContent, newLine, similarity)) {
             return false;
         }

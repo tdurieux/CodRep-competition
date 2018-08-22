@@ -1,6 +1,8 @@
 package tdurieux.CodRep.filter;
 
+import java.util.List;
+
 public interface LineFilter {
 
-    boolean filter(int line, String lineContent, String newLine, double similarity);
+    boolean filter(List<Integer> line, String lineContent, String newLine, double similarity);
 }

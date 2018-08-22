@@ -17,8 +17,10 @@ import spoon.support.compiler.jdt.JDTBasedSpoonCompiler;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -26,6 +28,21 @@ public class SpoonUtil {
 
     public static String[] splitLine(String fileContent) {
         return fileContent.split("\\r?\\n");
+    }
+
+    public static Map<String, List<Integer>> splitLineToMap(String fileContent) {
+        Map<String, List<Integer>> output = new HashMap<>();
+        String[] split = fileContent.split("\\r?\\n");
+        int lineNumber = 0;
+        for (String line : split) {
+            line = line.trim();
+            if (!output.containsKey(line)) {
+                output.put(line, new ArrayList<>(2));
+            }
+            output.get(line).add(lineNumber);
+            lineNumber++;
+        }
+        return output;
     }
 
     public static Launcher getModelFromString(String contents) {
