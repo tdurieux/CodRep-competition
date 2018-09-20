@@ -1,15 +1,13 @@
 package tdurieux.CodRep.predictor;
 
-import spoon.Launcher;
 import spoon.reflect.CtModel;
 import spoon.reflect.code.*;
 import spoon.reflect.declaration.*;
-import spoon.reflect.factory.Factory;
 import spoon.reflect.reference.CtTypeReference;
 import spoon.reflect.visitor.filter.AbstractFilter;
 import spoon.reflect.visitor.filter.LineFilter;
 import spoon.reflect.visitor.filter.TypeFilter;
-import spoon.support.compiler.VirtualFile;
+import tdurieux.CodRep.sort.DistancePredictor;
 import tdurieux.CodRep.util.ReachableVariableVisitor;
 import tdurieux.CodRep.util.SpoonUtil;
 
@@ -46,7 +44,7 @@ public class ASTPredictor implements LinePredictor {
     }
 
     public List<List<Integer>> predict() {
-        DistancePredictor distancePredictor = new DistancePredictor(fileContent, line);
+        /*DistancePredictor distancePredictor = new DistancePredictor(fileContent, line);
 
         if (ctStatement == null) {
             return distancePredictor.predict();
@@ -116,9 +114,9 @@ public class ASTPredictor implements LinePredictor {
             }
             for (int i = 0; i < options.size(); i++) {
                 CtTypeMember option =  options.get(i);
-                //output.add(option.getPosition().getLine() - 1);
+                //output.add(option.getPosition().getLineContent() - 1);
             }
-            Map<List<Integer>, Double> result = distancePredictor.getSimilarity();
+            Map<List<Integer>, Double> result = distancePredictor.getSimilarityImpl();
             output.sort((s1, s2) -> {
                 if (!result.containsKey(s1) && result.containsKey(s2)) {
                     return 1;
@@ -202,7 +200,7 @@ public class ASTPredictor implements LinePredictor {
             }
         }).collect(Collectors.toList());
 
-        Map<List<Integer>, Double> result = distancePredictor.getSimilarity();
+        Map<List<Integer>, Double> result = distancePredictor.getSimilarityImpl();
         /*TreeSet<List<Integer> output = new TreeSet<>((s1, s2) -> {
             if (!result.containsKey(s1) && result.containsKey(s2)) {
                 return 1;
@@ -226,9 +224,9 @@ public class ASTPredictor implements LinePredictor {
         for (int i = 0; i < options.size(); i++) {
             CtStatement option =  options.get(i);
             if (option instanceof CtType) {
-                output.add(option.getPosition().getLine() - 1);
+                output.add(option.getPosition().getLineContent() - 1);
             } else {
-                for (int j = option.getPosition().getLine() - 1; j < option.getPosition().getEndLine(); j++) {
+                for (int j = option.getPosition().getLineContent() - 1; j < option.getPosition().getEndLine(); j++) {
                     output.add(j);
                 }
             }

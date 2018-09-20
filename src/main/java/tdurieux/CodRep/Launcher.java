@@ -1,8 +1,7 @@
 package tdurieux.CodRep;
 
+import tdurieux.CodRep.context.LineContext;
 import tdurieux.CodRep.predictor.LinePredictor;
-import tdurieux.CodRep.predictor.SyntaxPredictor;
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -21,39 +20,34 @@ public class Launcher {
 			return;
 		}
 
-		runOnDataset(SyntaxPredictor.class, args[0]);
+		runOnDataset(args[0]);
 	}
 
-	private static <T extends LinePredictor> T linePredictorFactory(Class<T> predictorClass, File filename) throws IOException {
+	private static Predictor linePredictorFactory(File filename) throws IOException {
 		String fileContent = new String(Files.readAllBytes(filename.toPath()));
 		int indexFirstLine = fileContent.indexOf("\n");
 		String newLine = fileContent.substring(0, indexFirstLine);
 		fileContent = fileContent.substring(indexFirstLine + 1);
-
-		try {
-			Constructor<T> constructor = predictorClass.getConstructor(String.class, String.class);
-			return constructor.newInstance(fileContent, newLine);
-		} catch (Exception e) {
-			throw new IllegalArgumentException("Constructor not found");
-		}
+		return new Predictor(newLine, fileContent);
 	}
 
-	private static <T extends LinePredictor> void runOnDataset(Class<T> predictorClass, String path) throws IOException, InterruptedException {
-		ExecutorService executor = Executors.newFixedThreadPool(2);
+	private static <T extends LinePredictor> void runOnDataset(String path) throws IOException, InterruptedException {
+		ExecutorService executor = Executors.newFixedThreadPool(4);
 
 		List<Callable<Integer>> tasks = Files.list(new File(path).toPath()).collect(Collectors.toList()).stream().map(p -> (Callable<Integer>) () -> {
-			T predictor;
+			Predictor predictor;
 			try {
-				predictor = linePredictorFactory(predictorClass, p.toFile());
+				predictor = linePredictorFactory(p.toFile());
 			} catch (Throwable e) {
 				e.printStackTrace();
 				return 1;
 			}
 
-			List<List<Integer>> predictions = predictor.predict();
+			List<LineContext> predictions = predictor.predict();
 			Integer prediction = 1;
 			if (!predictions.isEmpty()) {
-				prediction = predictions.get(0).get(0);
+				int randomLine =  predictions.get(0).getLineNumbers().size() - 1;
+				prediction = predictions.get(0).getLineNumbers().get(randomLine);
 			}
 			System.out.println(p.toAbsolutePath() + " " + (prediction));
 			return prediction;

@@ -170,7 +170,7 @@ def main():
         try:
             prediction = int(prediction)
         except ValueError:
-            print(prediction + " should be integers!")
+            print("%s should be integers!" % inputs)
             raise
 
         # Check the prediction

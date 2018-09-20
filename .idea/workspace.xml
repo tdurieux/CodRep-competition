@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11fb9cbf-7e32-4461-a641-90272b2837be" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Baseline/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baseline/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/SyntaxLineFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/SyntaxLineFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTPredictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTPredictor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTValidatorPredictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTValidatorPredictor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/DistancePredictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/sort/DistancePredictor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/SyntaxPredictor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/SpoonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/SpoonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tdurieux/CodRep/ASTPredictorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tdurieux/CodRep/ASTPredictorTest.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-868371738">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="53" />
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="53" />
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="4124" />
+          <entry key="py" value="30" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="4124" />
+          <entry key="Python" value="30" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tdurieux/CodRep/ASTPredictorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/StartFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/BreakFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ReturnFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ThrowFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="103" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/KeywordsFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Launcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-213">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ImportFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Predictor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2274#2275#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#2339#2340#0" expanded="true" />
+                <element signature="e#2373#2374#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lossFunction</find>
+      <find>DistancePredictor</find>
+      <find>in top 10</find>
+      <find>Old Line</find>
+      <find>SyntaxPredictor</find>
+      <find>&quot;INTEGER NOT NULL&quot;</find>
+      <find>reac</find>
+      <find>target</find>
+      <find>JDTBasedSpoonCompiler</find>
+      <find>in top</find>
+      <find>top 10</find>
+      <find>checkAnswers</find>
+      <find>chosen_datasets</find>
+      <find>out</find>
+      <find>output</find>
+      <find>top 10 0</find>
+      <find>import</find>
+      <find>//</find>
+      <find>should be this one</find>
+      <find>Map&lt;List&lt;Integer&gt;, Double&gt;</find>
+      <find>@</find>
+      <find>Old Line  .</find>
+      <find>Old Line  +</find>
+      <find>if</find>
+      <find>thro</find>
+      <find>brea</find>
+      <find>break</find>
+      <find>return</find>
+      <find>throw</find>
+      <find>throw</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>element instanceof</replace>
+      <replace>NormalizedStringSimilarity</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tdurieux/CodRep/LauncherTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/SpoonElementLibrary.java" />
+        <option value="$PROJECT_DIR$/Datasets/Dataset1/Tasks/3075.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/LocationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/BeforeLocationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/ReachableVariableVisitor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tdurieux/CodRep/LinePredictorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Predictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/LineFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/SyntaxPredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/LinePredictor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tdurieux/CodRep/RemoveStringTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/DefaultLineFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/SyntaxLineFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/DistancePredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/ASTPredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/SyntaxPredictor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/LineFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/LinePredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/DefaultLineFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/SyntaxLineFilter.java" />
+        <option value="$PROJECT_DIR$/Baseline/evaluate.py" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Keywords.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/Filter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/DistancePredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/sort/SortLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/StatementContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/sort/DistancePredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTPredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/EquaityFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ImportFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/BraceFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/AnnotationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/Keywords.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/KeywordsFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/VariableFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/SizeFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/SpoonUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTValidatorPredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/LineContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Predictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/BreakFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/Parser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ThrowFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/StartFilter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tdurieux/CodRep/ASTPredictorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ReturnFilter.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="Baseline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CodRep" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CodRep" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CodRep" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CodRep" type="462c0819:PsiDirectoryNode" />
+              <item name="predictor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CodRep" type="462c0819:PsiDirectoryNode" />
+              <item name="sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodRep" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodRep-competition" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CodRep" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="pars&#9;FILE&#9;file:///home/tdurieux/git/CodRep-competition/src/main/java/tdurieux/CodRep/context/Parser.java&#10;defaultProblem&#9;PSI&#9;JAVA://org.eclipse.jdt.internal.compiler.problem.DefaultProblem&#10;ctIn&#9;FILE&#9;jar:///home/thomas/.m2/repository/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/support/reflect/code/CtInvocationImpl.class&#10;visi&#9;FILE&#9;jar:///home/thomas/.m2/repository/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/reflect/visitor/CtAbstractVisitor.class" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spoon" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tdurieux.CodRep" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tdurieux.CodRep" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tdurieux.CodRep.filter" />
+      <recent name="tdurieux.CodRep.predictor" />
+      <recent name="tdurieux.CodRep" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/tdurieux/CodRep" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tdurieux.CodRep.context" />
+      <recent name="tdurieux.CodRep" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ASTPredictorTest.dataset1">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASTPredictorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodRep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tdurieux.CodRep.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tdurieux.CodRep" />
+      <option name="MAIN_CLASS_NAME" value="tdurieux.CodRep.ASTPredictorTest" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASTPredictorTest.dataset1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodRep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tdurieux.CodRep.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tdurieux.CodRep" />
+      <option name="MAIN_CLASS_NAME" value="tdurieux.CodRep.ASTPredictorTest" />
+      <option name="METHOD_NAME" value="dataset1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASTPredictorTest.dataset2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodRep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tdurieux.CodRep.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tdurieux.CodRep" />
+      <option name="MAIN_CLASS_NAME" value="tdurieux.CodRep.ASTPredictorTest" />
+      <option name="METHOD_NAME" value="dataset2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASTPredictorTest.dataset3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodRep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tdurieux.CodRep.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tdurieux.CodRep" />
+      <option name="MAIN_CLASS_NAME" value="tdurieux.CodRep.ASTPredictorTest" />
+      <option name="METHOD_NAME" value="dataset3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASTPredictorTest.dataset4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodRep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tdurieux.CodRep.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tdurieux.CodRep" />
+      <option name="MAIN_CLASS_NAME" value="tdurieux.CodRep.ASTPredictorTest" />
+      <option name="METHOD_NAME" value="dataset4" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ASTPredictorTest.dataset2" />
+      <item itemvalue="JUnit.ASTPredictorTest.dataset1" />
+      <item itemvalue="JUnit.ASTPredictorTest.dataset3" />
+      <item itemvalue="JUnit.ASTPredictorTest" />
+      <item itemvalue="JUnit.ASTPredictorTest.dataset4" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ASTPredictorTest.dataset1" />
+        <item itemvalue="JUnit.ASTPredictorTest.dataset2" />
+        <item itemvalue="JUnit.ASTPredictorTest.dataset4" />
+        <item itemvalue="JUnit.ASTPredictorTest.dataset3" />
+        <item itemvalue="JUnit.ASTPredictorTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11fb9cbf-7e32-4461-a641-90272b2837be" name="Default" comment="" />
+      <created>1524080520209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524080520209</updated>
+      <workItem from="1524080522785" duration="47374000" />
+      <workItem from="1524250998672" duration="4556000" />
+      <workItem from="1524376576000" duration="736000" />
+      <workItem from="1524745015355" duration="1994000" />
+      <workItem from="1525067322100" duration="618000" />
+      <workItem from="1525252381549" duration="1794000" />
+      <workItem from="1525432772731" duration="2037000" />
+      <workItem from="1525461590466" duration="625000" />
+      <workItem from="1525780950456" duration="599000" />
+      <workItem from="1525854594709" duration="1795000" />
+      <workItem from="1526014054708" duration="774000" />
+      <workItem from="1526454054029" duration="597000" />
+      <workItem from="1526809580748" duration="848000" />
+      <workItem from="1526886778829" duration="1912000" />
+      <workItem from="1527078858180" duration="1840000" />
+      <workItem from="1527155342365" duration="618000" />
+      <workItem from="1527245315392" duration="3478000" />
+      <workItem from="1527763630289" duration="1383000" />
+      <workItem from="1527787297164" duration="6310000" />
+      <workItem from="1527866251017" duration="593000" />
+      <workItem from="1527880587741" duration="597000" />
+      <workItem from="1528031221430" duration="597000" />
+      <workItem from="1528451281817" duration="4862000" />
+      <workItem from="1528790929308" duration="3200000" />
+      <workItem from="1529060863336" duration="1617000" />
+      <workItem from="1534929160527" duration="5236000" />
+      <workItem from="1534937449405" duration="5267000" />
+      <workItem from="1534961556764" duration="636000" />
+      <workItem from="1534962653194" duration="53000" />
+      <workItem from="1534962875176" duration="41000" />
+      <workItem from="1534964641730" duration="815000" />
+      <workItem from="1534977631829" duration="387000" />
+      <workItem from="1535208945670" duration="92000" />
+      <workItem from="1535379421216" duration="20000" />
+      <workItem from="1537272588205" duration="18845000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 26m 19s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 30m 40s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 32m 54s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 33m 59s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 34m 45s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 35m 16s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 36m 32s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset1 - 2018.09.20 at 14h 37m 15s.xml">
+      <configuration name="ASTPredictorTest.dataset1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset2 - 2018.09.20 at 14h 38m 40s.xml">
+      <configuration name="ASTPredictorTest.dataset2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ASTPredictorTest_dataset3 - 2018.09.20 at 14h 39m 51s.xml">
+      <configuration name="ASTPredictorTest.dataset3" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="122746000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20632368" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32928178" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42099446" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35359117" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3955801" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2883978" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19551282" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42202836" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49945474" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4089422" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.28898582" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/LocationFilter.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/ReachableVariableVisitor.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="element.getPosition().getLine() ==165" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTPredictor.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tdurieux/CodRep/RemoveStringTest.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tdurieux/CodRep/ASTPredictorTest.java</url>
+          <line>117</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/BreakFilter.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>s.getLineContent().contains(&quot;if (dlist == null || dlist.size() &lt; limit) return false;&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s.contains(&quot;Style.apply(getContentPane(), new Style(Res.class.getResource(\&quot;style.css\&quot;)));&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s.equals(&quot;Style.apply(getContentPane(), new Style(Res.class.getResource(\&quot;style.css\&quot;)));&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s.equals(&quot;};&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>!localroblems.isEmpty()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i &gt; 89</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i &gt; 63</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line &gt; 63</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i &gt; 93</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line &gt; 279</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>predictor.predict()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toPredict.hasKeyword(keywords) != existing.hasKeyword(keywords)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toPredict.hasKeyword(keywords) != existing.hasKeyword(keywords))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toPredict.hasKeyword(keywords)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Math.max(existingLength, toPredictLength) * 1.0 / Math.min(existingLength, toPredictLength) &gt; thresold</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Math.max(existingLength, toPredictLength) * 1.0 / Math.min(existingLength, toPredictLength)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toPredict.hasKeyword(keywords) &amp;&amp; existing.hasKeyword(keywords)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toPredict.hasKeyword(keywords) &amp;&amp; existing.hasKeyword(keywords))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.charAt(i - word.length() - 1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Datasets/Dataset2/Tasks/3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Datasets/Dataset2/Tasks/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2353" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/SpoonElementLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/support/reflect/declaration/CtPackageImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/reflect/visitor/CtScanner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/reflect/visitor/EarlyTerminatingScanner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/support/reflect/code/CtInvocationImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tdurieux/CodRep/RemoveStringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="48" column="5" selection-start-line="20" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/me/xdrop/fuzzywuzzy/1.1.10/fuzzywuzzy-1.1.10.jar!/me/xdrop/diffutils/DiffUtils.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/me/xdrop/fuzzywuzzy/1.1.10/fuzzywuzzy-1.1.10.jar!/me/xdrop/fuzzywuzzy/ratios/SimpleRatio.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/me/xdrop/fuzzywuzzy/1.1.10/fuzzywuzzy-1.1.10.jar!/me/xdrop/fuzzywuzzy/FuzzySearch.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/SpoonModelBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/inria/gforge/spoon/spoon-core/6.2.0/spoon-core-6.2.0.jar!/spoon/support/compiler/jdt/JDTBasedSpoonCompiler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/tycho/org.eclipse.jdt.core/3.13.50.v20171007-0855/org.eclipse.jdt.core-3.13.50.v20171007-0855.jar!/org/eclipse/jdt/internal/compiler/problem/DefaultProblem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2416">
+          <caret line="188" column="45" selection-start-line="188" selection-start-column="36" selection-end-line="188" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2720">
+            <caret line="170" column="39" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/BeforeLocationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/LocationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/LinePredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2416">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/debatty/java-string-similarity/1.1.0/java-string-similarity-1.1.0.jar!/info/debatty/java/stringsimilarity/SorensenDice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1854">
+          <caret line="103" column="56" selection-start-line="103" selection-start-column="56" selection-end-line="103" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baseline/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="172" column="51" selection-start-line="172" selection-start-column="51" selection-end-line="172" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/LineFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/sort/SortLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/sort/DistancePredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/SyntaxPredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTPredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/EquaityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/DefaultLineFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/AnnotationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/BraceFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/Keywords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/SyntaxLineFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/VariableFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/SizeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/predictor/ASTValidatorPredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/LineContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1861#1862#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#2124#2125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/util/SpoonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-213">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ImportFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/context/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/Predictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2274#2275#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+            <element signature="e#2373#2374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/KeywordsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/BreakFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ThrowFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="103" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/StartFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tdurieux/CodRep/filter/ReturnFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tdurieux/CodRep/ASTPredictorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CodRep</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

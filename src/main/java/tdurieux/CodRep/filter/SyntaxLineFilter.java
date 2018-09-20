@@ -34,26 +34,31 @@ public class SyntaxLineFilter extends DefaultLineFilter {
         if (removeComment(newLine).trim().endsWith("+") && !removeComment(newLine).trim().endsWith("+")) {
             return false;
         }
-        if ((newLineWithoutComment.startsWith("class ") || newLineWithoutComment.contains(" class ")) && !lineWithoutComment.contains("class ")) {
-            return false;
-        }
-        if ((newLineWithoutComment.startsWith("enum ") || newLineWithoutComment.contains(" enum ")) && !lineWithoutComment.contains("enum ")) {
-            return false;
-        }
-        if ((newLineWithoutComment.startsWith("interface ") || newLineWithoutComment.contains(" interface ")) && !lineWithoutComment.contains("interface ")) {
-            return false;
-        }
-        if (newLineWithoutComment.startsWith("import ") && !lineWithoutComment.contains("import ")) {
-            return false;
-        }
-        if (newLineWithoutComment.startsWith("package ") && !lineWithoutComment.contains("package ")) {
-            return false;
-        }
-        if (!newLineWithoutComment.contains("import ") && lineWithoutComment.contains("import ")) {
-            return false;
-        }
-        if (!newLineWithoutComment.contains("package ") && lineWithoutComment.contains("package ")) {
-            return false;
+        if (!newLineWithoutComment.isEmpty()) {
+            if ((newLineWithoutComment.startsWith("class ") || newLineWithoutComment.contains(" class ")) && !lineWithoutComment.contains("class ")) {
+                return false;
+            }
+            if ((newLineWithoutComment.startsWith("enum ") || newLineWithoutComment.contains(" enum ")) && !lineWithoutComment.contains("enum ")) {
+                return false;
+            }
+            if ((newLineWithoutComment.startsWith("interface ") || newLineWithoutComment.contains(" interface ")) && !lineWithoutComment.contains("interface ")) {
+                return false;
+            }
+            if (newLineWithoutComment.startsWith("import ") && !lineWithoutComment.contains("import ")) {
+                return false;
+            }
+            if (newLineWithoutComment.startsWith("package ") && !lineWithoutComment.contains("package ")) {
+                return false;
+            }
+            if (!newLineWithoutComment.contains("import ") && lineWithoutComment.contains("import ")) {
+                return false;
+            }
+            if (newLineWithoutComment.contains("import ")) {
+                return checkImportLine(newLineWithoutComment, lineWithoutComment);
+            }
+            if (!newLineWithoutComment.contains("package ") && lineWithoutComment.contains("package ")) {
+                return false;
+            }
         }
         int nbBraceNewLine = StringUtils.countMatches(newLineWithoutComment, "(") - StringUtils.countMatches(newLineWithoutComment, ")");
         int nbBrace = StringUtils.countMatches(removeString(lineWithoutComment), "(") - StringUtils.countMatches(removeString(lineWithoutComment), ")");
@@ -66,6 +71,21 @@ public class SyntaxLineFilter extends DefaultLineFilter {
             return false;
         }
         return true;
+    }
+
+    private boolean checkImportLine(String newLine, String line) {
+        String[] newLineQualifiedName = newLine.substring(7, newLine.length() - 1).split("\\.");
+        String[] lineQualifiedName = line.substring(7, line.length() - 1).split("\\.");
+        int lineLast = lineQualifiedName.length - 1;
+        String className = lineQualifiedName[lineLast];
+        int lastNew = newLineQualifiedName.length - 1;
+        String newLineClassName = newLineQualifiedName[lastNew];
+        if (className.equals("*") || newLineClassName.equals("*")) {
+            className = lineQualifiedName[lineLast - 1];
+            newLineClassName = newLineQualifiedName[lastNew - 1];
+            return newLineClassName.contains(className) || className.contains(newLineClassName);
+        }
+        return newLineClassName.equals(className);
     }
 
 

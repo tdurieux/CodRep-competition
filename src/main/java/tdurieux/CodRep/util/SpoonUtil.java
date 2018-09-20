@@ -14,6 +14,8 @@ import spoon.reflect.factory.Factory;
 import spoon.reflect.reference.CtTypeReference;
 import spoon.support.compiler.VirtualFile;
 import spoon.support.compiler.jdt.JDTBasedSpoonCompiler;
+import tdurieux.CodRep.context.LineContext;
+import tdurieux.CodRep.context.Parser;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
@@ -30,19 +32,20 @@ public class SpoonUtil {
         return fileContent.split("\\r?\\n");
     }
 
-    public static Map<String, List<Integer>> splitLineToMap(String fileContent) {
-        Map<String, List<Integer>> output = new HashMap<>();
+    public static List<LineContext> splitLineToMap(String fileContent) {
+        Map<String, LineContext> output = new HashMap<>();
         String[] split = fileContent.split("\\r?\\n");
         int lineNumber = 0;
         for (String line : split) {
             line = line.trim();
             if (!output.containsKey(line)) {
-                output.put(line, new ArrayList<>(2));
+                LineContext context = Parser.parse(line);
+                output.put(line, context);
             }
-            output.get(line).add(lineNumber);
+            output.get(line).getLineNumbers().add(lineNumber);
             lineNumber++;
         }
-        return output;
+        return new ArrayList<>(output.values());
     }
 
     public static Launcher getModelFromString(String contents) {
