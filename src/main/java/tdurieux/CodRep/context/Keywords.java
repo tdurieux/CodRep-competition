@@ -36,7 +36,7 @@ public enum Keywords {
 
     PUBLIC, PROTECTED, PRIVATE, ABSTRACT, STATIC, FINAL, TRANSIENT, VOLATILE, SYNCHRONIZED, NATIVE, STRICTFP,
 
-    INT, DOUBLE, FLOAT, LONG, CHAR, FALSE, TRUE, VOID,
+    INT, DOUBLE, FLOAT, LONG, CHAR, BOOLEAN, BYTE, FALSE, TRUE, VOID,
 
     NULL;
 
@@ -45,6 +45,6 @@ public enum Keywords {
     }
 
     public static List<Keywords> primitives() {
-        return Arrays.asList(INT, DOUBLE, FLOAT, LONG, CHAR, FALSE, TRUE);
+        return Arrays.asList(INT, DOUBLE, FLOAT, LONG, CHAR, VOID, BOOLEAN, BYTE);
     }
 }

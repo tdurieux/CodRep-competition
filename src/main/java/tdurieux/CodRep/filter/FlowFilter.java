@@ -3,7 +3,7 @@ package tdurieux.CodRep.filter;
 import tdurieux.CodRep.context.Keywords;
 import tdurieux.CodRep.context.LineContext;
 
-public class BreakFilter implements Filter {
+public class FlowFilter implements Filter {
 
     @Override
     public boolean filter(LineContext existing, LineContext toPredict) {

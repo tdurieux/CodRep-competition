@@ -1,5 +1,7 @@
 package tdurieux.CodRep.context;
 
+import spoon.reflect.declaration.CtElement;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,6 +21,7 @@ public class LineContext {
     Map<Character, Integer> tokens = new HashMap<>();
     private String lineContent;
     private List<Integer> lineNumbers = new ArrayList<>();
+    private CtElement element;
 
     public void addComment(String content) {
         comments.add(content);
@@ -79,6 +82,10 @@ public class LineContext {
         numbers.add(word);
     }
 
+    public List<String> getNumbers() {
+        return numbers;
+    }
+
     @Override
     public String toString() {
         return lineContent;
@@ -98,5 +105,17 @@ public class LineContext {
 
     public List<Integer> getLineNumbers() {
         return lineNumbers;
+    }
+
+    public boolean hasToken(char s) {
+        return this.tokens.containsKey(s);
+    }
+
+    public CtElement getElement() {
+        return element;
+    }
+
+    public void setElement(CtElement element) {
+        this.element = element;
     }
 }

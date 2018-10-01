@@ -2,9 +2,13 @@ package tdurieux.CodRep;
 
 import tdurieux.CodRep.context.Parser;
 import tdurieux.CodRep.context.LineContext;
+import tdurieux.CodRep.filter.AnnotationFilter;
 import tdurieux.CodRep.filter.BraceFilter;
-import tdurieux.CodRep.filter.BreakFilter;
-import tdurieux.CodRep.filter.EquaityFilter;
+import tdurieux.CodRep.filter.FlowFilter;
+import tdurieux.CodRep.filter.CatchFilter;
+import tdurieux.CodRep.filter.CommentFilter;
+import tdurieux.CodRep.filter.ConstructorCallFilter;
+import tdurieux.CodRep.filter.EqualityFilter;
 import tdurieux.CodRep.filter.Filter;
 import tdurieux.CodRep.filter.ImportFilter;
 import tdurieux.CodRep.filter.KeywordsFilter;
@@ -12,14 +16,12 @@ import tdurieux.CodRep.filter.ReturnFilter;
 import tdurieux.CodRep.filter.SizeFilter;
 import tdurieux.CodRep.filter.StartFilter;
 import tdurieux.CodRep.filter.ThrowFilter;
-import tdurieux.CodRep.filter.VariableFilter;
 import tdurieux.CodRep.sort.DistancePredictor;
 import tdurieux.CodRep.util.SpoonUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class Predictor {
 
@@ -29,19 +31,23 @@ public class Predictor {
     private final LineContext context;
 
     private final List<Filter> filters = Arrays.asList(
-            new EquaityFilter(),
+            new EqualityFilter(),
             new SizeFilter(),
+            new CatchFilter(),
             new BraceFilter(),
+            new ConstructorCallFilter(),
             new StartFilter(),
+            new AnnotationFilter(),
             new KeywordsFilter(),
+            new CommentFilter(),
             new ReturnFilter(),
             new ThrowFilter(),
-            new BreakFilter(),
+            new FlowFilter(),
             new ImportFilter());
 
     public Predictor(String newLine, String fileContent) {
         this.line = newLine.trim();
-        this.context = Parser.parse(this.line);
+        this.context = new Parser().parse(this.line);
         this.fileContent = fileContent;
         lines = SpoonUtil.splitLineToMap(fileContent);
     }

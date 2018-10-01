@@ -19,6 +19,9 @@ public class ReturnFilter implements Filter {
             return true;
         }
         if (toPredict.hasKeyword(Keywords.BREAK) || toPredict.hasKeyword(Keywords.CONTINUE) || toPredict.hasKeyword(Keywords.RETURN) || toPredict.hasKeyword(Keywords.THROW)) {
+            if (toPredict.getLineContent().equals("return null!")) {
+                return !(existing.getNumbers().size() > 0);
+            }
             return true;
         }
         return false;

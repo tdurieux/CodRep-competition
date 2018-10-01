@@ -17,6 +17,15 @@ public class KeywordsFilter implements Filter {
 
     @Override
     public boolean filter(LineContext existing, LineContext toPredict) {
+        if (toPredict.getLineContent().startsWith("//")) {
+            for (int i = 0; i < hasToHave.size(); i++) {
+                Keywords keywords =  hasToHave.get(i);
+                if (toPredict.getLineContent().contains(keywords.toString().toLowerCase())) {
+                    return true;
+                }
+            }
+            return false;
+        }
         for (int i = 0; i < hasToHave.size(); i++) {
             Keywords keywords =  hasToHave.get(i);
             if (toPredict.hasKeyword(keywords) != existing.hasKeyword(keywords) ||

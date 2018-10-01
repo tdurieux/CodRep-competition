@@ -13,6 +13,14 @@ public class ImportFilter implements Filter {
         if (!existing.hasKeyword(Keywords.IMPORT)) {
             return true;
         }
+        if (!toPredict.getLineContent().contains("import")) {
+            return false;
+        }
+        if (toPredict.getLineContent().contains(" static ")) {
+            if (!existing.getLineContent().contains(" static ")) {
+                return false;
+            }
+        }
         return checkImportLine(toPredict, existing);
     }
 
@@ -25,6 +33,9 @@ public class ImportFilter implements Filter {
         String newLineClassName = newLineQualifiedName[lastNew];
         if (className.equals("*") || newLineClassName.equals("*")) {
             className = lineQualifiedName[lineLast - 1];
+            if (lastNew == 0) {
+                System.out.println("test");
+            }
             newLineClassName = newLineQualifiedName[lastNew - 1];
             return newLineClassName.contains(className) || className.contains(newLineClassName);
         }

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class StartFilter implements Filter {
-    private static final List<Character> tokens = Arrays.asList('.', '+', '{');
+    private static final List<Character> tokens = Arrays.asList('.', '+', '{', '"', ',');
 
     @Override
     public boolean filter(LineContext existing, LineContext toPredict) {

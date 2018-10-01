@@ -33,13 +33,14 @@ public class SpoonUtil {
     }
 
     public static List<LineContext> splitLineToMap(String fileContent) {
+        Parser parser = new Parser();
         Map<String, LineContext> output = new HashMap<>();
         String[] split = fileContent.split("\\r?\\n");
         int lineNumber = 0;
         for (String line : split) {
             line = line.trim();
+            LineContext context = parser.parse(line);
             if (!output.containsKey(line)) {
-                LineContext context = Parser.parse(line);
                 output.put(line, context);
             }
             output.get(line).getLineNumbers().add(lineNumber);

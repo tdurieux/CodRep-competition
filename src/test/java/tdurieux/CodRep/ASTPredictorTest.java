@@ -29,7 +29,8 @@ public class ASTPredictorTest {
      * SyntaxPredictor jaroWinkler   3468/4394 78% , in Top 10 4167 94% , loss 0.20649968333865018
      * SyntaxPredictor Levenshtein   3611/4394 82% , in Top 10 4257 96% , loss 0.1757567738051666
      * SyntaxPredictor 3934/4394 89% , in Top 10 4334 98% , loss 0.10400918447628195
-     * 3964/4394 90% , in Top 10 4352 99% , loss 0.09722562405352109
+     * 3969/4394 90% , in Top 10 4345 98% , loss 0.0961338728732935
+     * 3967/4394 90% , in Top 10 4346 98% , loss 0.09654287550022056
      */
     @Test
     public void dataset1() throws IOException {
@@ -44,6 +45,7 @@ public class ASTPredictorTest {
      * SyntaxPredictor sorensen     10104/11069 91% , in Top 10 10831 97% , loss 0.0853413900365686
      * SyntaxPredictor 10123/11069 91% , in Top 10 10850 98% , loss 0.08405196035050681
      * 10174/11069 91% , in Top 10 10914 98% , loss 0.07949290882664403
+     * 10176/11069 91% , in Top 10 10908 98% , loss 0.07930336605281313
      */
     @Test
     public void dataset2() throws IOException {
@@ -55,7 +57,8 @@ public class ASTPredictorTest {
      * SyntaxPredictor 17520/18633 94% , in Top 10 18454 99% , loss 0.05824092991175515
      * SyntaxPredictor 17656/18633 94% , in Top 10 18421 98% , loss 0.051236059205672306
      * 17733/18633 95% , in Top 10 18481 99% , loss 0.04740034860505994
-     *
+     * 17730/18633 95% , in Top 10 18479 99% , loss 0.04757300445514349
+     * 17753/18633 95% , in Top 10 18498 99% , loss 0.04631417984476575
      */
     @Test
     public void dataset3() throws IOException {
@@ -66,7 +69,7 @@ public class ASTPredictorTest {
      * SyntaxPredictor 15786/17132 92% , in Top 10 16936 98% , loss 0.07700153400317002
      * SyntaxPredictor 15930/17132 92% , in Top 10 17001 99% , loss 0.06890840252070096
      * SyntaxPredictor 16014/17132 93% , in Top 10 16988 99% , loss 0.06400286891954794
-     * 16049/17132 93% , in Top 10 17011 99% , loss 0.06201224512601686
+     * 16074/17132 93% , in Top 10 17031 99% , loss 0.06053843584998035
      */
     @Test
     public void dataset4() throws IOException {
